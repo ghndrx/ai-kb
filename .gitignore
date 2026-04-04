@@ -1,0 +1,26 @@
+# User's knowledge base content (not part of the tool)
+raw/*
+!raw/images/
+wiki/
+output/
+/kb.yaml
+.kb-last-compile
+
+# Claude Code local config
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+raw/images/generate_hero.py
