@@ -12,7 +12,7 @@ tags:
   - git
 status: stable
 confidence: high
-summary: "Greg assigns via Telegram, Data writes code directly, creates PR, CI runs, Greg merges. No AI crons, no GitHub Issues."
+summary: "Greg assigns via Telegram, Data dispatches Claude CLI to write code, reviews output, creates PR, CI runs, Greg merges."
 ---
 
 # Hearth Development Cycle
@@ -22,7 +22,7 @@ summary: "Greg assigns via Telegram, Data writes code directly, creates PR, CI r
 | Who | Role |
 |-----|------|
 | **Greg** (Director) | Assigns work via Telegram, reviews PRs, makes decisions |
-| **Data** | Primary coding agent — writes code, creates PRs, ships features |
+| **Data** | Dispatcher + reviewer — uses Claude CLI to write code, reviews output, creates PRs, ships features |
 | **CI/CD** | Automated testing, linting, security scanning |
 
 **Rules**:
@@ -35,8 +35,9 @@ summary: "Greg assigns via Telegram, Data writes code directly, creates PR, CI r
 
 ```
 Greg says "build X" (Telegram)
-    → Data writes code directly (no sub-agents)
-    → Feature branch → commit → push → PR
+    → Data dispatches Claude CLI to write code
+    → Data reviews, commits output
+    → Feature branch → push → PR
     → CI: build, test, lint, security
     → Greg reviews → merges
 ```
